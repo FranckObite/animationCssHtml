@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+   
+}
+.pulse{
+    background-color: white;
+    position: relative;
+    width: 1100px;
+    height: 500px;
+    scroll-behavior: auto;
+    animation: 8s fondAnimation linear infinite alternate;
+   
+
+}
+
+
+.maCouleur{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius: 50%;
+    left: 450px;
+    top: 150px;
+
+
+}
+
+.maCouleur span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: inherit;
+    animation: pulseAnimation 1s linear infinite alternate;
+
+}
+
+@keyframes pulseAnimation{
+    0%{
+        transform: scale(2);
+        border-radius: 0%;
+       
+    }
+    
+  25%{
+    transform: scale (0.1);
+    border-radius:25%;
+    background-color:orange;
+  }
+
+   100%{
+    transform: scale (1);
+    border-radius:50%;
+  background-color:green;
+
+  }
+
+ 
+}
